@@ -1,0 +1,42 @@
+{
+  "name": "Advanced daily ops plan",
+  "steps": [
+    {
+      "name": "Show workspace path",
+      "tool": "terminal",
+      "args": {
+        "command": "pwd"
+      }
+    },
+    {
+      "name": "List repository root",
+      "tool": "list_dir",
+      "args": {
+        "path": "."
+      }
+    },
+    {
+      "name": "Create execution note",
+      "tool": "write_file",
+      "args": {
+        "path": "outputs/execution_note.txt",
+        "content": "Automation assistant executed sample plan.\n"
+      }
+    },
+    {
+      "name": "Append timestamp line",
+      "tool": "append_file",
+      "args": {
+        "path": "outputs/execution_note.txt",
+        "content": "Next: customize tools/policy for your workflow.\n"
+      }
+    },
+    {
+      "name": "Read note back",
+      "tool": "read_file",
+      "args": {
+        "path": "outputs/execution_note.txt"
+      }
+    }
+  ]
+}

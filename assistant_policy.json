@@ -1,0 +1,35 @@
+{
+  "allowed_tools": [
+    "terminal",
+    "powershell",
+    "read_file",
+    "write_file",
+    "append_file",
+    "list_dir",
+    "download"
+  ],
+  "allowed_download_domains": [
+    "github.com",
+    "raw.githubusercontent.com",
+    "pypi.org",
+    "files.pythonhosted.org"
+  ],
+  "blocked_command_patterns": [
+    "\\brm\\s+-rf\\s+/",
+    "\\bshutdown\\b",
+    "\\breboot\\b",
+    "\\bformat\\b",
+    "\\bmkfs\\b",
+    "\\bdel\\s+/f\\b",
+    "\\bcurl\\b.+\\|\\s*(bash|sh|pwsh|powershell)",
+    "\\bInvoke-Expression\\b"
+  ],
+  "require_approval_patterns": [
+    "\\bapt\\b",
+    "\\byum\\b",
+    "\\bchoco\\b",
+    "\\bpip\\s+install\\b",
+    "\\bnpm\\s+install\\b",
+    "\\bgit\\s+push\\b"
+  ]
+}
